@@ -1,0 +1,411 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid_conteiner{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:   " encabezado"
+                            "principal "
+                            "pie_de_pagina";
+}
+
+header{
+    grid-area: encabezado;
+}
+
+.encabezado{
+    display: grid;
+    grid-template-columns: 12% 15% 73%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "encabezado_logo_img encabezado_logo_txt navegacion";
+    background-color: aliceblue;
+
+}
+
+.encabezado_logo_img{
+    grid-area: encabezado_logo_img;
+    
+  
+}
+
+.encabezado_logo_img img{
+    border: 1px;
+    width: 55px;
+    height: 40px;  
+    float:right;
+}
+.encabezado_logo_txt{
+    grid-area: encabezado_logo_txt;
+   
+
+}
+.encabezado_logo_txt li{
+    list-style-type: none;
+    float:left;
+    
+}
+.encabezado_logo_txt li a{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: small;
+    font-style: oblique;
+    color:rgba(0, 136, 255, 0.822);
+}
+.navegacion{
+    grid-area: navegacion;
+
+}
+
+.navegacion ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    align-items:flex-end;
+    justify-content: flex-end;
+    height:fit-content;
+    border-width: 0ch;
+}
+
+.navegacion ul li a{
+    text-decoration: none;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color:rgba(1, 8, 14, 0.822);
+    transition: all 1s;
+}
+
+.navegacion ul li a:hover {
+    color: rgb(89, 0, 255);
+    font-size: 22px;
+}
+
+main{
+    grid-area: principal;
+}
+
+.principal_index{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "titulo_h1       index_img"
+                          "titulo_h2      index_img"
+                          "titulo_iconos  index_img";
+    background-color: rgb(124, 127, 218);
+    border:dotted 1px rgb(124, 127, 218);
+    background-image: linear-gradient(to right,rgb(92, 97, 229), rgb(197, 24, 216));
+ 
+}
+
+h1{
+    grid-area: titulo_h1;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    font-style: normal;
+    justify-content: center;
+    color:rgb(59, 56, 56);
+    font-weight: bolder;
+    font-size: 2.4rem;
+    font-family:'Roboto', 'Sans Serif';
+    align-content: center;
+
+}
+
+h2{
+    grid-area: titulo_h2;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 2rem;
+    text-align: center;
+    font-style: normal;
+    justify-content: center;
+    color:azure;
+    font-family:'Roboto', 'Sans Serif';
+    font-weight: 700;
+    align-content: center;
+}
+.titulo_iconos{
+   
+    grid-area: titulo_iconos;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    list-style-type: none;
+    align-content: center;
+    justify-content: center;
+
+  
+}
+.titulo_iconos li i{
+    padding-right: 20px;
+    color:rgb(3, 3, 142);
+}
+
+.index_img{
+    grid-area: index_img;
+    align-items: center;
+    justify-items: center;
+}
+
+.index_img img{
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-bottom: 10px;
+    border-radius: 10%;
+    border-color: black;
+    width: 250px;
+    height: 385px;
+    transition: height 1s, width 1s;
+
+  
+}
+
+.index_img img:hover {
+
+    height: 442px; width: 288px;
+
+}
+
+.principal_nosotros{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "nosotros_media   nosotros_h1"
+                         "nosotros_media   nosotros_txt"
+                         "nosotros_media   nosotros_boton";
+                         background-image: linear-gradient(to bottom,rgb(152, 155, 224), rgb(205, 142, 211));
+}
+.nosotros_media{
+    grid-area: nosotros_media;
+    align-items: center;
+    justify-items: center;
+}
+
+.nosotros_media video{
+    display: flex;
+    border-radius: 10%;
+    border: 5px;
+    border-color: aqua;
+    border-style:double;
+    padding-left: 5px;
+    margin-top:30px;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+
+    background-color: rgb(55, 87, 214);
+}
+
+.nosotros_h1{
+    grid-area: nosotros_h1;
+    font-size: 3rem;
+    font-family: 'Roboto', 'Sans Serif';
+    text-align: center;
+}
+
+.nosotros_txt{
+    grid-area: nosotros_txt;
+    
+}
+
+.nosotros_txt p{
+    margin-left: 30px;
+    margin-right: 40px;
+    font-size: 1.2rem;
+    font-family: 'Roboto', 'Sans Serif';
+    font-style: normal;
+    font-weight: lighter;
+    color: rgb(38, 41, 185);
+    margin-top: 5px;
+    text-align:left;
+    align-items: center;
+    justify-content: center;
+    text-justify:distribute;
+  
+
+}
+
+#nosotros_boton{
+    grid-area: nosotros_boton;
+}
+
+footer{
+    grid-area: pie_de_pagina;
+  
+
+}
+.pie_de_pagina{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "pie_de_pagina_logo  pie_de_pagina_social  pie_de_pagina_fiscal"
+                         "pie_de_pagina_legal pie_de_pagina_legal   pie_de_pagina_legal";
+
+    justify-items: center;
+    align-items: center;
+    background-color:azure;
+}  
+
+.pie_de_pagina_logo{
+    grid-area: pie_de_pagina_logo;
+   
+}
+
+.pie_de_pagina_logo img{
+    float: right;
+    width: 77px;
+    height: 70px;
+    padding-top: 10px;
+    object-fit:fill;
+
+}
+.pie_de_pagina_social{
+   
+    grid-area: pie_de_pagina_social;
+}
+
+.pie_de_pagina_social ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    list-style-type: none;
+   
+}
+
+.pie_de_pagina_social ul li{
+ padding-top: 10px;
+ padding-right: 30px;
+
+}
+.pie_de_pagina_social ul li i{
+    color:rgb(49, 18, 92);
+    transition: color 2s;
+   }
+
+   .pie_de_pagina_social ul li i:hover {
+   color: blue;
+}
+.pie_de_pagina_fiscal{
+    grid-area: pie_de_pagina_fiscal;
+    
+}
+
+.pie_de_pagina_fiscal img{
+    margin-top: 20px;
+    width: 80px;
+    height: 90px;
+    border:solid 5px black;
+    object-fit: fill;    
+    padding: 5px;
+}
+
+.pie_de_pagina_legal{
+    grid-area: pie_de_pagina_legal;
+
+}
+.pie_de_pagina_legal p{
+        text-align:center;
+        color:blue;
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        align-content: center;
+      
+       
+    }
+
+@media only screen and (max-width:1024px){
+.encabezado{
+
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: "encabezado_logo_img encabezado_logo_txt navegacion"
+                 
+        
+    }
+    .navegacion ul{
+        list-style-type: none;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: flex-end;
+        height:fit-content;
+        border-width: 0ch;
+    }
+    .principal_nosotros{
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "nosotros_h1"
+                             "nosotros_txt"
+                             "nosotros_boton"
+                             "nosotros_media";
+        align-items: center;
+        
+    
+}
+}
+
+@media screen and (max-width: 768px) {
+    
+    .principal_index{
+       
+        grid-template-columns: auto;
+        grid-template-rows:auto auto auto auto;
+        grid-template-areas: "titulo_h1"
+                              "titulo_h2"   
+                              "titulo_iconos"
+                             "index_img";
+         justify-items: center;
+         align-items: center;
+    }
+
+  
+    .titulo_iconos{
+       
+        margin-top: 20px;
+      
+    }
+
+    .nosotros_media video{
+     width:60% ;
+     height: 60%;
+     align-content:space-between;
+    }
+  
+   
+
+    .pie_de_pagina{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "pie_de_pagina_logo "
+                             "pie_de_pagina_social "
+                             "pie_de_pagina_fiscal"
+                             "pie_de_pagina_legal";
+         justify-items: center;
+    
+    }
+
+  
+}
+
+
+@media screen and (max-width: 576px) {
+    .nosotros_boton_c{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        }
+}
