@@ -157,6 +157,7 @@ h2{
     grid-area: index_img;
     align-items: center;
     justify-items: center;
+    align-content: center;
 }
 
 .index_img img{
@@ -189,12 +190,14 @@ h2{
 }
 .nosotros_media{
     grid-area: nosotros_media;
-    align-items: center;
-    justify-items: center;
+    
 }
 
 .nosotros_media video{
     display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
     border-radius: 10%;
     border: 5px;
     border-color: aqua;
@@ -205,8 +208,6 @@ h2{
     margin-right: 20px;
     margin-bottom: 30px;
     padding: 5px;
-    justify-content: center;
-    align-items: center;
     overflow:hidden;
 
     background-color: rgb(55, 87, 214);
@@ -379,9 +380,7 @@ footer{
     }
 
 @media only screen and (max-width:1024px){
-    .navlink{
-        order: 0;
-    }
+   
     .encabezado{
 
         grid-template-columns: auto auto auto;
@@ -394,10 +393,18 @@ footer{
         list-style-type: none;
         display:flex;
         flex-direction:column;
-        align-items:center;
+        align-items:flex-end;
         justify-content: flex-end;
         height:fit-content;
         border-width: 0ch;
+    }
+    .navegacion ul li a{
+        text-decoration: none;
+        padding: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10px;
+        text-align: justify;
+       
     }
     .principal_nosotros{
         grid-template-columns: auto ;
@@ -407,7 +414,16 @@ footer{
                              "nosotros_boton"
                              "nosotros_media";
         align-items: center;
-    }     
+    } 
+    .nosotros_media video{
+        width:80% ;
+        height: 80%;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        align-content: flex-start;
+       }    
     .planes{
         flex-direction:column;
         justify-content: center;
@@ -430,16 +446,20 @@ footer{
     }
 
   
+    .index_img img{
+        padding-left: 20px;
+        width: 150px;
+        height: 231px;
+
+    }
     .titulo_iconos{
        
         margin-top: 20px;
-
     }
 
     .nosotros_media video{
      width:60% ;
      height: 60%;
-     align-content:space-between;
     }
   
    
@@ -455,7 +475,6 @@ footer{
     
     }
 
-  
 }
 
 
