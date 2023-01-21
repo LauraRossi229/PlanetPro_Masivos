@@ -272,6 +272,16 @@ h2{
     grid-area: descripcion_servicio_mail;
 }
 
+.planes{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items:center;
+    align-content: center;
+    padding-top: 10px;
+}
+
 footer{
     grid-area: pie_de_pagina;
   
@@ -382,9 +392,12 @@ footer{
                              "nosotros_boton"
                              "nosotros_media";
         align-items: center;
-        
-    
-}
+    }     
+    .planes{
+        flex-direction:column;
+        justify-content: center;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
