@@ -242,6 +242,36 @@ h2{
     grid-area: nosotros_boton;
 }
 
+.principal_servicios{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "slide_servicio"
+                         "descripcion_servicio_sms"
+                         "descripcion_servicio_wa"
+                         "descripcion_servicio_mail";
+}
+.slide_servicio{
+    grid-area: slide_servicio;
+    
+}
+
+#descripcion_servicio_sms{
+    grid-area: descripcion_servicio_sms;
+}
+.descripcion_servicio_p{
+    font-size: medium;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+}
+#descripcion_servicio_wa{
+    grid-area: descripcion_servicio_wa;
+}
+#descripcion_servicio_mail{
+    grid-area: descripcion_servicio_mail;
+}
+
 footer{
     grid-area: pie_de_pagina;
   
