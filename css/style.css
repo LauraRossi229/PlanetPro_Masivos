@@ -49,12 +49,13 @@ header{
     float:left;
     
 }
-.encabezado_logo_txt li a{
+.encabezado_logo_txt_font{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: small;
     font-style: oblique;
     color:rgba(0, 136, 255, 0.822);
+
 }
 .navegacion{
     grid-area: navegacion;
@@ -73,13 +74,12 @@ header{
 }
 
 
-
 .navegacion ul li a{
     text-decoration: none;
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    color:rgba(1, 8, 14, 0.822);
+    color:rgba(1, 11, 19, 0.822);
     transition: all 1s;
 }
 
