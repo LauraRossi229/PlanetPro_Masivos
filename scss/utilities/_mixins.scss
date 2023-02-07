@@ -3,6 +3,7 @@
     width: $width;
  }
  
+ 
  @mixin contenedor_grid($columnas, $filas, $areas){
     display: grid;
     grid-template-columns: $columnas;
