@@ -1,70 +1,75 @@
 .encabezado_logo_txt_font {
-    font:$logo_font;
+    font: $logo_font;
     color: map-get($paleta_colores_txt, logo_txt);
 }
 
 .nav_txt {
-	text-decoration: none;
-	padding: 10px;
-	font:$nav_font;
-	transition: all 1s;
+    text-decoration: none;
+    padding: 10px;
+    font: $nav_font;
+    transition: all 1s;
 
 }
 
-.titulo{
+.titulo {
 
-        &_h1 {
-            margin:$principal_h_margin;
-            text-align: center;
-            justify-content: center;
-            align-content: center;
-            color: map-get($paleta_colores_txt, principal_h1);
-            font: $principal_font;
-        }
-        &_h2 {
-            @extend .titulo_h1;
-            color: map-get($paleta_colores_txt, principal_h2);
-            font-size: 1.5rem;
-        }
+    &_h1 {
+        margin: $principal_h_margin;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        color: map-get($paleta_colores_txt, principal_h1);
+        font: $principal_font;
+    }
+
+    &_h2 {
+        @extend .titulo_h1;
+        color: map-get($paleta_colores_txt, principal_h2);
+        font-size: 1.5rem;
+    }
 }
 
 .pie_de_pagina_legal {
-	p {
+    p {
         color: map-get($paleta_colores_txt, main_p);
-        font:$pie_de_pagina_font;
-		align-content: center;
+        font: $pie_de_pagina_font;
+        align-content: center;
         text-align: center;
-	}
+    }
 }
 
-.nosotros{
-            &_h1 {
-                grid-area: nosotros_h1;
-                text-align: center;
+.nosotros {
+    &_h1 {
+        grid-area: nosotros_h1;
+        text-align: center;
+        align-items: center;
+
+        &_font {
+            font: $nosotros_font;
+            color: $nosotros_h1;
+        }
+
+        &_txt {
+            grid-area: nosotros_txt;
+
+            p {
+                font: $nosotros_font2;
+                margin-left: 30px;
+                margin-right: 40px;
+                margin-top: 5px;
+                text-align: left;
                 align-items: center;
-                    &_font {
-                        font:$nosotros_font;
-                        color: $nosotros_h1;
-                    }
-            &_txt {
-	            grid-area: nosotros_txt;
-	                p {
-                        font:$nosotros_font2;
-                        margin-left: 30px;
-                        margin-right: 40px;
-                        margin-top: 5px;
-                        text-align: left;
-                        align-items: center;
-                        justify-content: center;
-                        text-justify: distribute;
-                        color: $nosotros_txt;
-	                }
+                justify-content: center;
+                text-justify: distribute;
+                color: $nosotros_txt;
             }
         }
     }
+}
 
-.descripcion_servicio_p{
-        margin: auto;
-        font-size: medium;
-        text-align: justify;
-    }
+.descripcion_servicio_p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: medium;
+    text-align: justify;
+}
